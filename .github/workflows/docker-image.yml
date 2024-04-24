@@ -5,9 +5,7 @@ on:
     branches: [ "main" ]
   
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -24,9 +22,6 @@ jobs:
           password: ${{secrets.DOCKERHUB_TOKEN}}
       
     - name: Build and push
-      uses: docker/build-push-action@v5
-      with:
-        context: .
-        file: ./Dockerfile
-        push: true
-        tags: ${{secrets.DOCKERHUB_USERNAME}}/node-ci:latest
+      run: |
+        docker buildx build --file ./Dockerfile --tag ${{secrets.DOCKERHUB_USERNAME}}/node-ci:latest --push .
+
