@@ -29,4 +29,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{secrets.DOCKERHUB_USERNAME}}/node-c
+        tags: ${{secrets.DOCKERHUB_USERNAME}}/node-ci:latest
