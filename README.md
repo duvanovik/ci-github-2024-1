@@ -2,7 +2,7 @@
 
 
 
-## Introducción
+### Introducción
 
 Este proyecto consiste en una GitHub Action que automatiza la construcción y el empuje de una imagen Docker a Docker Hub. La acción se activa cuando se realiza un push en la rama main del repositorio.
 
