@@ -1,71 +1,33 @@
-# Getting Started with Create React App
+# Documentación del Proyecto | Duvan García
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-hi
 
-## Available Scripts
 
-In the project directory, you can run:
+## Introducción
 
-### `npm start`
+Este proyecto consiste en una GitHub Action que automatiza la construcción y el empuje de una imagen Docker a Docker Hub. La acción se activa cuando se realiza un push en la rama main del repositorio.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Instalación
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+No se requiere instalación específica para utilizar esta acción. Sin embargo, asegúrate de tener una cuenta en Docker Hub y de haber configurado los secretos necesarios en tu repositorio de GitHub para autenticarte en Docker Hub durante la ejecución de la acción.
 
-### `npm test`
+### Configuración
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Asegúrate de tener un archivo Dockerfile en la raíz de tu repositorio que defina cómo construir la imagen Docker.
+2. Configura los secretos DOCKERHUB_USERNAME y DOCKERHUB_TOKEN en la configuración de tu repositorio de GitHub con tus credenciales de Docker Hub.
 
-### `npm run build`
+### Uso
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para utilizar esta GitHub Action, simplemente realiza un push en la rama main de tu repositorio en GitHub. La acción se ejecutará automáticamente y construirá la imagen Docker según lo definido en el Dockerfile, y luego la empujará a Docker Hub.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Evidencias
 
-### `npm run eject`
+**Evidencia dockerhub**
+![docker](https://github.com/duvanovik/ci-github-2024-1/assets/42594511/adb5396b-8dc7-4495-b97d-690229f231b0)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Evidencia pipeline**
+![docker2](https://github.com/duvanovik/ci-github-2024-1/assets/42594511/45b812f4-38e6-4b04-81af-b84ca958e1f0)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
