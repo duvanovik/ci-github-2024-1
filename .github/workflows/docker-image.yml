@@ -24,7 +24,7 @@ jobs:
           context: .  # Ruta al contexto de construcción (puede ser el directorio actual)
           file: ./Dockerfile  # Ruta al Dockerfile
           push: true  # Habilitar el empuje de la imagen
-          tags: ${{ secrets.DOCKER_USERNAME }}/node-ci:latest  # Nombre y etiqueta de la imagen
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/node-ci:latest  # Nombre y etiqueta de la imagen
       env:
-          DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAM }}
+          DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
